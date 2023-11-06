@@ -1,0 +1,99 @@
+.login {
+  .drop-menu__list {
+    display: none;
+
+    &--login {
+      display: flex;
+    }
+  }
+}
+
+.drop-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background-color: $color-default-white;
+  z-index: 1;
+  width: 80px;
+  min-height: 115px;
+  padding: 4px;
+  transform: translateY(-10px);
+  transition: all 0.5s;
+
+  &--active {
+    display: block;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include vp-1439 {
+    right: 80px;
+  }
+}
+
+.drop-menu__name {
+  position: relative;
+  margin: 0 0 20px;
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background-color: $color-barley-corn;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.drop-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  &--active {
+    display: flex;
+  }
+
+  &--login {
+    display: none;
+  }
+}
+
+.drop-menu__item {
+  text-align: center;
+}
+
+.drop-menu__button {
+  border: none;
+  cursor: pointer;
+  color: $color-default-black;
+  background-color: transparent;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding: 0;
+  transition: text-shadow 0.5s;
+  text-decoration: none;
+
+  &:hover {
+    text-shadow: 0 0 0.65px $color-default-black, 0 0 0.65px $color-default-black;
+  }
+}

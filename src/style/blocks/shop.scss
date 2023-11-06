@@ -1,0 +1,123 @@
+.shop {
+  background-color: $color-default-white;
+}
+
+.shop__container {
+  max-width: 1440px;
+  padding: 20px 20px 40px;
+  margin: 0 auto;
+}
+
+.shop__title {
+  @include section-title;
+  text-align: center;
+  margin: 0 0 61px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: $color-black-russian;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.shop__description {
+  @include section-description;
+  letter-spacing: 2px;
+  margin: 0 0 40px;
+}
+
+.shop__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    display: block;
+  }
+}
+
+.shop__drink-wrapper {
+  @include vp-1439 {
+    margin-bottom: 40px;
+  }
+}
+
+.shop__food-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.shop__wrapper-main-title {
+  @include section-title;
+  color: $color-barley-corn;
+  margin: 0 0 40px;
+
+  &--food {
+    text-align: right;
+  }
+}
+
+.shop__wrapper-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(min-content, 200px) max-content;
+  row-gap: 40px;
+  column-gap: 220px;
+  align-items: center;
+
+  &--food {
+    grid-template-columns: minmax(min-content, 220px) max-content;
+  }
+}
+
+.shop__wrapper-title {
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+
+  &--food {
+    justify-self: end;
+  }
+}
+
+.shop__wrapper-price {
+  color: $color-default-black;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: $color-barley-corn;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 390%;
+  }
+}
+
+.shop__wrapper-price--foood {
+  &::after {
+    right: 290%;
+  }
+}

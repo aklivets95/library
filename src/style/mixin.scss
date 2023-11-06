@@ -1,0 +1,77 @@
+@mixin main-title {
+  font-family: "Forum", "Arial", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $color-default-white;
+}
+
+@mixin logo-text {
+  color: $color-default-white;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+}
+
+@mixin navigation-links {
+  color: $color-default-white;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+@mixin section-title {
+  color: $color-black-russian;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+@mixin section-description {
+  color: $color-default-black;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+@mixin main-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+@mixin button-text {
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}

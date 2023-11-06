@@ -1,0 +1,157 @@
+.login {
+  .library-card__button {
+    display: none;
+
+    &--login {
+      display: block;
+    }
+  }
+
+  .library-card__account-title {
+    display: none;
+
+    &--login {
+      display: block;
+    }
+  }
+
+  .library-card__account-description {
+    display: none;
+
+    &--login {
+      display: block;
+    }
+  }
+}
+
+.library-card {
+  background-color: $color-default-white;
+}
+
+.library-card__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 20px 41px;
+
+  @include vp-1439 {
+    padding-bottom: 40px;
+  }
+}
+
+.library-card__title {
+  @include section-title;
+  margin: 0 0 61px;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: $color-black-russian;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.library-card__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    display: block;
+  }
+}
+
+.library-card__form {
+  @include vp-1439 {
+    margin: 0 auto 22px;
+    max-width: 600px;
+  }
+}
+
+.library-card__account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 456px;
+
+  @include vp-1439 {
+    max-width: none;
+    display: block;
+  }
+}
+
+.library-card__account-title {
+  margin: 0 0 35px;
+  color: $color-default-black;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+
+  @include vp-1439 {
+    text-align: center;
+    margin-bottom: 39px;
+  }
+
+  &--login {
+    display: none;
+  }
+}
+
+.library-card__account-description {
+  margin: 0 0 35px;
+  color: $color-default-black;
+  text-align: right;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+
+  @include vp-1439 {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  &--login {
+    display: none;
+  }
+}
+
+.library-card__button-container {
+  display: flex;
+  gap: 20px;
+
+  @include vp-1439 {
+    justify-content: center;
+  }
+}
+
+.library-card__button {
+  @include button-text;
+  cursor: pointer;
+  min-width: 75px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $color-black-russian;
+  padding: 8px 2px;
+  transition: background-color 0.7s, border-color 0.7s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-barley-corn;
+    border-color: $color-barley-corn;
+  }
+
+  &--login {
+    display: none;
+  }
+}

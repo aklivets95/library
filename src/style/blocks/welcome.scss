@@ -1,0 +1,38 @@
+.welcome {
+  background-color: $color-black-russian;
+  position: relative;
+  z-index: 0;
+}
+
+.welcome__background-image {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.welcome__container {
+  min-height: 600px;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: $black-to-white;
+}
+
+.welcome__wrapper {
+  background-color: $color-black-russian;
+  width: 600px;
+  padding: 35px 40px;
+  position: absolute;
+  top: 220px;
+}
+
+.welcome__title {
+  @include main-title;
+  margin: 0;
+  text-align: center;
+}

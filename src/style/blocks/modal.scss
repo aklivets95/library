@@ -1,0 +1,528 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__register {
+  margin: auto;
+  background-color: $color-default-white;
+  width: 250px;
+  min-height: 382px;
+  padding: 20px 25px;
+}
+
+.modal__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.modal__title {
+  color: $color-default-black;
+  text-align: center;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.register__input-name {
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 0 0 10px;
+  display: inline-block;
+}
+
+.register__input {
+  border: 1px solid $color-barley-corn;
+}
+
+.register__submit-button {
+  margin-top: 10px;
+  min-width: 75px;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: $color-black-russian;
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.register__wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.register__description {
+  margin: 0;
+  color: $color-default-black;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.register__register-link {
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.modal__login {
+  width: 250px;
+  min-height: 262px;
+  background-color: $color-default-white;
+  margin: auto;
+  padding: 20px 25px;
+}
+
+.login__input-name {
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 0 0 10px;
+  display: inline-block;
+}
+
+.login__input {
+  border: 1px solid $color-barley-corn;
+}
+
+.login__submit-button {
+  margin-top: 10px;
+  min-width: 75px;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: $color-black-russian;
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.login__wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.login__description {
+  margin: 0;
+  color: $color-default-black;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.login__register-link {
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.modal__profile {
+  background-color: $color-default-white;
+  display: flex;
+  max-width: 610px;
+  min-width: 600px;
+}
+
+.profile__container {
+  background-color: $color-default-black;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 170px;
+}
+
+.profile__avatar {
+  background-color: $color-default-white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-barley-corn;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.profile__name {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: $color-default-white;
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile__wrapper {
+  padding: 40px 20px 39px;
+}
+
+.profile__title {
+  margin: 0 0 40px;
+  color: $color-default-black;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.profile__count-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.profile__count-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile__count-title {
+  margin: 0;
+  color: $color-default-black;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+
+.profile__count-value {
+  margin: 0;
+  color: $color-default-black;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.profile__rented-title {
+  margin: 0 0 30px;
+  color: $color-black-russian;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile__rented-list {
+  margin: 0 0 40px;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100px;
+}
+
+.profile__rented-item {
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.profile__card-number-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile__card-number-title {
+  margin: 0;
+  color: $color-black-russian;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile__card-number-value {
+  margin: 0;
+  color: $color-barley-corn;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile__card-number-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.modal__buy-card {
+  background-color: $color-default-white;
+  width: 640px;
+  min-height: 540px;
+}
+
+.buy-card__header {
+  background-color: $color-default-black;
+  padding: 20px;
+}
+
+.buy-card__title {
+  margin: 0;
+  color: $color-default-white;
+  text-align: center;
+  font-family: "Forum", "Arial", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.buy-card__main {
+  padding: 30px 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.buy-card__form-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buy-card__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buy-card__input-name {
+  color: $color-default-black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.buy-card__input {
+  background-color: transparent;
+  border: 1px solid $color-barley-corn;
+}
+
+.buy-card__wrapper {
+  display: flex;
+  gap: 10px;
+
+  input {
+    width: 45px;
+  }
+}
+
+.buy-card__form-button {
+  margin: 0 25px 0 0;
+  min-width: 75px;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: $color-black-russian;
+  color: $color-black-russian;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  transition: opacity 0.3s;
+  border-radius: 2px;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.buy-card__price {
+  color: $color-black-russian;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.buy-card__description {
+  margin: 0;
+  color: $color-suva-grey;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}

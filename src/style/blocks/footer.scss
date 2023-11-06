@@ -1,0 +1,112 @@
+.footer {
+  background-color: $color-black-russian;
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 20px 44px;
+}
+
+.footer__contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0 0 30px;
+  margin: 0 0 44px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+}
+
+.footer__contacts-address {
+  color: $color-default-white;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.footer__social-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-row: 2 / 3;
+  align-self: center;
+  display: flex;
+  gap: 15px;
+}
+
+.footer__social-link {
+  display: flex;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.footer__shedule-description {
+  margin: 0;
+  color: $color-default-white;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  justify-self: end;
+  text-align: right;
+}
+
+.footer__signature-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__signature-text {
+  color: $color-default-white;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.footer__signature-text--login {
+  text-decoration: none;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.footer__school-link {
+  text-decoration: none;
+  margin-left: 56px;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include vp-1439 {
+    margin: 0;
+  }
+}
